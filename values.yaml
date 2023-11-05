@@ -740,6 +740,8 @@ grafana.ini:
     url: https://grafana.net
   server:
     domain: "{{ if (and .Values.ingress.enabled .Values.ingress.hosts) }}{{ .Values.ingress.hosts | first }}{{ else }}''{{ end }}"
+    protocol: https
+    root_url: https://grafana.jack-newbury.co.uk
 ## grafana Authentication can be enabled with the following values on grafana.ini
 # server:
 # The full public facing url you use in browser, used for redirects and emails
